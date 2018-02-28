@@ -258,6 +258,15 @@ URL updateStatus(Message status) {
 
 ---
 
+# Summary
+
+* Micronaut aims to provide the same wow factor for Micro Services that Grails did for Monoliths
+* Built by the people that made Grails, leveraging over 10 years experience in framework development
+* Coming soon in 2018
+
+
+---
+
 # Q & A TIME
 
 ![100%,original, right](images/micronaut-stack-blue.png)
