@@ -216,6 +216,49 @@ interface PetClient {
 URL updateStatus(Message status) {
     Status s = twitter.updateStatus(status.text)
     String url = "https://twitter.com/$s.user.screenName/status/${s.id}"
-    return new URL(url)
+    return new URL(url);
 }
 ```
+
+---
+
+# Micronaut Roadmap
+
+* First Milestones in Q2
+* GA by the end of the year
+* TODO: AWS Route 53, Google Metadata Server Support
+* TODO: Metrics & Distributed Tracing
+* TODO: Retry & Hystrix Support
+
+
+![100%,original, right](images/micronaut-stack-blue.png)
+
+---
+
+# What About Grails?
+
+* Grails is _awesome_, *mature* and *robust*
+* ... for Creating Monoliths
+* Not Every Application Needs Micro Services
+* You Will Want Parts if Micronaut in your Grails apps (HTTP Client, Discovery Client etc.)
+
+
+![50%,original,right](images/grails-logo.png)
+
+---
+
+# Grails 4.0 (Q4 2018)
+
+* Java 8 minimum, Java 9 support, Groovy 2.5
+* Spring Boot 2 and Spring 5
+* GORM 7.0 
+* Micronaut Integration
+
+![50%,original,right](images/grails-logo.png)
+
+---
+
+# Q & A TIME
+
+![100%,original, right](images/micronaut-stack-blue.png)
+
