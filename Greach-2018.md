@@ -1,37 +1,47 @@
 footer: © Object Computing Inc., 2018
-slidenumbers: true
+slidenumbers: false
 
-![top,60%,original](images/oci.jpeg)
+![original](images/oci-big-center-bottom-bg.png)
 
-## Launching the Micro Future
-
+# [FIT] Launching the Micro Future
 > Groovy, Grails and Project Particle
 -- by Graeme Rocher
 
 ---
 
-## Then and Now
+![original](images/2008-bg.png)
 
-* Since 2008, a lot has changed
-* 10 years ago Grails 1.0 was released!
-* Everybody was building Monoliths
-* No Angular, No React, No Docker, No Micro Services
+[.hide-footer]
 
-![right, fit](images/2008.jpg)
+# Then and Now
 
----
-
-## So We Try to Adapt
-
-* Let's try and fit Monolith focused framework into Micro environment!
-* Spring and Grails were never designed for this
-* ... No matter how much marketing you hear
-
-![left](images/elephant.jpg)
+- Since 2008, a lot has changed
+- 10 years ago Grails 1.0 
+was released!
+- Everybody was building 
+Monoliths
+- No Angular, No React, 
+No Docker, No Micro Services
 
 ---
 
-## What to do, What to do?
+# So We Try to Adapt
+
+![original](images/elephant-bg.png)
+
+[.hide-footer]
+
+* Let's try and fit 
+Monolith focused framework 
+into Micro environment!
+* Spring and Grails were 
+never designed for this
+* ... No matter how much 
+marketing you hear
+
+---
+
+# What to do, What to do?
 
 Shall we:
 
@@ -43,8 +53,11 @@ Shall we:
 
 ---
 
-## The Goal
+![original](images/oci-bg.png)
 
+[.hide-footer]
+
+# The Goal
 * Create a New Framework designed from the ground-up for Micro Services and Server-less Computing
 * Blazing fast startup time
 * Low Memory Footprint
@@ -52,11 +65,11 @@ Shall we:
 * Zero Dependency
 * 12 Factor - https://12factor.net
 
-![](images/thegoal.jpg)
+
 
 ---
 
-## The Analysis
+# The Analysis
 
 To meet this goal we performed an analysis of Spring and Grails and the challenges to using them to develop Micro Service applications
 
@@ -66,6 +79,10 @@ To meet this goal we performed an analysis of Spring and Grails and the challeng
 
 # What Spring (and Grails) Do
 
+![original](images/oci-bg.png)
+
+[.hide-footer]
+
 Spring is an amazing technical achievement and does so many things, but does them _at Runtime_.
 
 * [Reads the byte code](https://github.com/spring-projects/spring-framework/tree/master/spring-core/src/main/java/org/springframework/core/type/classreading) of every bean it finds
@@ -74,39 +91,59 @@ Spring is an amazing technical achievement and does so many things, but does the
 
 ---
 
+![original](images/startup-graph.png)
+
+[.hide-footer]
+
 # So What's the Problem?
 
-![fit,original](images/startup-graph.png)
 
 ---
 
 # The Micro Reality
 
-* With Spring (and Grails) anything beyond "Hello World" becomes fat quickly
-* But we love the programming model and productivity so we live with it
-* There must be a better way... right?
+![original](images/fatcat-bg.png)
 
-![right,fit](images/fatcat.jpg)
+[.hide-footer]
+
+* With Spring (and Grails) anything 
+beyond "Hello World" becomes 
+fat quickly
+* But we love the programming 
+model and productivity so 
+we live with it
+* There must be a better way... 
 
 ---
+
+![original](images/micronaut-bg.png)
+
+[.hide-footer] 
+
 <!-- # Introducing Micronaut -->
 
-![bottom, original, 99%](images/micronaut.jpg)
-
 ---
 
+![original](images/micronaut-logo-right.png)
+
+[.hide-footer]
+
 # Introducing Micronaut
-
-* Designed from the ground up with Micro Services in mind
-* Ultra-light weight and Reactive - Based on Netty
-* Integrated Compile-Time Dependency Injection and AOP
+* Designed from the ground up 
+with Micro Services in mind
+* Ultra-light weight and 
+Reactive - Based on Netty
+* Integrated AOP and 
+Compile-Time DI
 * HTTP Client & Server
-
-![fit,right](images/micronaut-stack-blue.png)
 
 ---
 
 # Hello Micronaut
+
+![original](images/oci-micronaut-bg.png)
+
+[.hide-footer]
 
 ```groovy
 @Controller
@@ -114,8 +151,7 @@ class HelloController {
     @Get("/hello/{name}")
     String hello(String name) { "Hello $name!" }
 }
-// Client Generated at Compile Time
-@Client("/")
+@Client("/") // Client Generated at Compile Time
 interface HelloClient {
   @Get("/hello/{name}")
   String hello(String name)
@@ -124,6 +160,10 @@ interface HelloClient {
 
 ---
 
+![original](images/oci-micronaut-bg.png)
+
+[.hide-footer]
+
 # How Small?
 
 * Micronaut Hello World JAR is 8MB when written Java or 12MB in Groovy
@@ -131,9 +171,11 @@ interface HelloClient {
 * Startup time is sub-second
 * All Dependency Injection, AOP and Proxy generation happens at compile time
 
-![fit,right](images/micronaut-stack-blue.png)
-
 ---
+
+![original](images/oci-micronaut-bg.png)
+
+[.hide-footer]
 
 # But... How?
 
@@ -141,38 +183,46 @@ interface HelloClient {
 * Annotation metadata produced at Compile Time
 * Reflection Free and No Reflection Data Caching
 
-![fit,right](images/micronaut-stack-blue.png)
-
-
 ---
 
+![original](images/facepalm-bg.png)
+
+[.hide-footer]
 
 # Not Another HTTP Server!?
 
-* If all we had achieved was another HTTP server Micronaut wouldn't be very interesting
+* If all we had achieved was 
+another HTTP server 
+Micronaut wouldn't be very 
+interesting
 * So what else does it do?
-
-![fit,right](images/facepalm.jpg)
-
 
 ---
 
 # Natively Cloud Native
+
+![original](images/oci-micronaut-bg.png)
+
+[.hide-footer]
 
 * Service Discovery - Consul and Eureka Supported; Route 53 Planned
 * Configuration Sharing - Consul Supported; Amazon & GCP Planned
 * Client Side Load Balancing - Integrated or Netflix Ribbon Supported
 * Support for Serverless Computing via AWS Lambda
 
-![60%](images/micronaut-stack-blue.png)
+---
+
+![original](images/oci-micronaut-bg.png)
+
+[.hide-footer]
+
+# [fit] DEMO 
 
 ---
 
-# DEMO TIME
+![original](images/oci-micronaut-bg.png)
 
-![100%,original, right](images/micronaut-stack-blue.png)
-
----
+[.hide-footer]
 
 # The HTTP Server
 
@@ -190,6 +240,10 @@ Single<List<Pet>> pets() {
 
 # The HTTP Client
 
+![original](images/oci-micronaut-bg.png)
+
+[.hide-footer]
+
 * Client Implementations Produced at Compile Time
 * Service Discovery by Service ID
 * Automatic Client Side Load Balancing & Fallback
@@ -206,6 +260,10 @@ interface PetClient {
 
 # Serverless Computing
 
+![original](images/oci-topright.png)
+
+[.hide-footer]
+
 * Write Functions and Run them locally or as regular server applications
 * Deploy Functions to AWS Lambda - after warm-up functions execute in milliseconds
 
@@ -216,36 +274,47 @@ interface PetClient {
 URL updateStatus(Message status) {
     Status s = twitter.updateStatus(status.text)
     String url = "https://twitter.com/$s.user.screenName/status/${s.id}"
-    return new URL(url);
+    return new URL(url)
 }
 ```
 
 ---
 
+![original](images/micronaut-logo-right.png)
+
+[.hide-footer]
+
 # Micronaut Roadmap
 
-* First Milestones in Q2
-* GA by the end of the year
-* TODO: AWS Route 53, Google Metadata Server Support
+- First Milestones in Q2
+- GA by the end of the year
+- TODO: AWS Route 53, 
+Google Metadata Server Support
 * TODO: Metrics & Distributed Tracing
 * TODO: Retry & Hystrix Support
 
 
-![100%,original, right](images/micronaut-stack-blue.png)
-
 ---
+
+![original](images/grails-logo-right-bg.png)
+
+[.hide-footer]
 
 # What About Grails?
 
 * Grails is _awesome_, *mature* and *robust*
-* ... for Creating Monoliths
-* Not Every Application Needs Micro Services
-* You Will Want Parts if Micronaut in your Grails apps (HTTP Client, Discovery Client etc.)
-
-
-![50%,original,right](images/grails-logo.png)
+... for Creating Monoliths
+* Not every Application needs 
+Micro Services
+* You will want parts of Micronaut 
+in your Grails apps: 
+HTTP Client, Discovery Client etc.
 
 ---
+
+![original](images/grails-logo-right-bg.png)
+
+[.hide-footer]
 
 # Grails 4.0 (Q4 2018)
 
@@ -254,9 +323,11 @@ URL updateStatus(Message status) {
 * GORM 7.0 
 * Micronaut Integration
 
-![50%,original,right](images/grails-logo.png)
-
 ---
+
+![original](images/oci-micronaut-bg.png)
+
+[.hide-footer]
 
 # Summary
 
@@ -267,7 +338,8 @@ URL updateStatus(Message status) {
 
 ---
 
-# Q & A TIME
+![original](images/oci-big-center-bottom-bg.png)
 
-![100%,original, right](images/micronaut-stack-blue.png)
+[.hide-footer]
 
+# [FIT] Q & A
