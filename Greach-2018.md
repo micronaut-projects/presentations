@@ -3,6 +3,8 @@ slidenumbers: false
 
 ![original](images/oci-big-center-bottom-bg.png)
 
+[.hide-footer]
+
 # [FIT] Launching the Micro Future
 > Groovy, Grails and Project Particle
 -- by Graeme Rocher
