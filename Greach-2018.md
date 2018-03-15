@@ -9,9 +9,24 @@ slidenumbers: false
 > Groovy, Grails and the Micro Future
 -- by Graeme Rocher
 
+
 ---
 
-![original](images/2008-bg.png)
+![original](images/oci-bg.png)
+
+[.hide-footer]
+
+# Agenda
+
+* How we got here
+* Microservice Challenges
+* Launching the Micro Future
+* Grails Roadmap
+
+
+---
+
+![right,50%](images/2008.jpg)
 
 [.hide-footer]
 
