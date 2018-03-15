@@ -324,6 +324,21 @@ Google Metadata Server Support
 
 ---
 
+![original](images/micronaut-logo-right.png)
+
+[.hide-footer]
+
+# Micronaut - Find Out More
+
+- We have launched a Micronaut 
+  website at: http://micronaut.io
+- Register at the bottom 
+  to get notifications
+- Speak to us (OCi) if you wish to
+  use Micronaut in beta form
+
+---
+
 ![original](images/grails-logo-right-bg.png)
 
 [.hide-footer]
