@@ -1,7 +1,9 @@
 footer: © Object Computing Inc., 2018
 slidenumbers: false
 
-![original](images/oci-big-center-bottom-bg.png)
+![original](images/oci-big-center-center.png)
+
+[.hide-footer]
 
 # [FIT] Launching the Micro Future
 > Groovy, Grails and the Micro Future
