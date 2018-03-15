@@ -317,10 +317,11 @@ URL updateStatus(Message status) {
 # Micronaut Roadmap
 
 - First Milestones in Q2
-- GA by the end of the year
-- TODO: AWS Route 53, 
+- GA by the end of the year. Still todo:
+- AWS Route 53, 
 Google Metadata Server Support
-* TODO: Metrics & Distributed Tracing
+* Metrics & Distributed Tracing
+* JWT Token Auth
 
 ---
 
