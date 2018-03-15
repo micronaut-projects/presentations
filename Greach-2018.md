@@ -4,7 +4,7 @@ slidenumbers: false
 ![original](images/oci-big-center-bottom-bg.png)
 
 # [FIT] Launching the Micro Future
-> Groovy, Grails and Project Particle
+> Groovy, Grails and the Micro Future
 -- by Graeme Rocher
 
 ---
@@ -21,7 +21,7 @@ was released!
 - Everybody was building 
 Monoliths
 - No Angular, No React, 
-No Docker, No Micro Services
+No Docker, No Microservices
 
 ---
 
@@ -45,7 +45,7 @@ marketing you hear
 
 Shall we:
 
-1.  Try and convince people that something never designed for Micro Services is still ok?
+1.  Try and convince people that something never designed for Microservices is still ok?
 2. Go back to the drawing board
 
 
@@ -58,7 +58,7 @@ Shall we:
 [.hide-footer]
 
 # The Goal
-* Create a New Framework designed from the ground-up for Micro Services and Server-less Computing
+* Create a New Framework designed from the ground-up for Microservices and Server-less Computing
 * Blazing fast startup time
 * Low Memory Footprint
 * As Small As Possible JAR Sizes
@@ -71,7 +71,7 @@ Shall we:
 
 # The Analysis
 
-To meet this goal we performed an analysis of Spring and Grails and the challenges to using them to develop Micro Service applications
+To meet this goal we performed an analysis of Spring and Grails and the challenges to using them to develop Microservice applications
 
 ![right](images/analysis.gif)
 
@@ -130,12 +130,22 @@ we live with it
 
 # Introducing Micronaut
 * Designed from the ground up 
-with Micro Services in mind
+with Microservices in mind
 * Ultra-light weight and 
 Reactive - Based on Netty
 * Integrated AOP and 
 Compile-Time DI
 * HTTP Client & Server
+
+---
+
+![original](images/oci-micronaut-bg.png)
+
+[.hide-footer]
+
+# [fit] DEMO
+
+* Hello Micronaut 
 
 ---
 
@@ -179,7 +189,8 @@ interface HelloClient {
 
 # But... How?
 
-* Compile Time Dependency Injection & AOP for Groovy and Java
+* Compile Time Dependency Injection & AOP for Groovy, Java and Kotlin
+* AST Transforms for Groovy. Annotation processors for Java/Kotlin
 * Annotation metadata produced at Compile Time
 * Reflection Free and No Reflection Data Caching
 
@@ -217,6 +228,8 @@ interesting
 [.hide-footer]
 
 # [fit] DEMO 
+
+* Micronaut Pet Store
 
 ---
 
@@ -291,8 +304,6 @@ URL updateStatus(Message status) {
 - TODO: AWS Route 53, 
 Google Metadata Server Support
 * TODO: Metrics & Distributed Tracing
-* TODO: Retry & Hystrix Support
-
 
 ---
 
@@ -305,10 +316,22 @@ Google Metadata Server Support
 * Grails is _awesome_, *mature* and *robust*
 ... for Creating Monoliths
 * Not every Application needs 
-Micro Services
+Microservices
 * You will want parts of Micronaut 
 in your Grails apps: 
 HTTP Client, Discovery Client etc.
+
+---
+
+![original](images/grails-logo-right-bg.png)
+
+[.hide-footer]
+
+# Grails Status Update
+
+* Grails 3.3.3 just released
+* Users seeing measured improvement in Memory consumption in production
+* More 3.3.x releases planned
 
 ---
 
@@ -320,7 +343,7 @@ HTTP Client, Discovery Client etc.
 
 * Java 8 minimum, Java 9 support, Groovy 2.5
 * Spring Boot 2 and Spring 5
-* GORM 7.0 
+* GORM 7.0 (Hibernate 5.2 minimum)
 * Micronaut Integration
 
 ---
@@ -331,7 +354,7 @@ HTTP Client, Discovery Client etc.
 
 # Summary
 
-* Micronaut aims to provide the same wow factor for Micro Services that Grails did for Monoliths
+* Micronaut aims to provide the same wow factor for Microservices that Grails did for Monoliths
 * Built by the people that made Grails, leveraging over 10 years experience in framework development
 * Coming soon in 2018
 
