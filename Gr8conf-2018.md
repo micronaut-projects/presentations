@@ -350,6 +350,17 @@ $ sdk install micronaut
 $ mn create-app hello-world
 ```
 ---
+
+# Micronaut Resources
+
+- Gitter Community: [https://gitter.im/micronautfw](https://gitter.im/micronautfw)
+- User Guide: [http://micronaut.io/documentation.html](http://micronaut.io/documentation.html)
+- Micronaut Guides: [http://guides.micronaut.io](http://guides.micronaut.io)
+- FAQ: [http://micronaut.io/faq.html](http://micronaut.io/faq.html)
+- Github: [https://github.com/micronaut-projects/micronaut-core](https://github.com/micronaut-projects/micronaut-core)
+- Examples: [https://github.com/micronaut-projects/micronaut-examples](https://github.com/micronaut-projects/micronaut-examples)
+
+---
 # Micronaut Events 
 
 - Loads of upcoming Events
@@ -417,6 +428,8 @@ HTTP Client, Discovery Client etc.
 * Spring Boot 2 and Spring 5
 * GORM 7.0 (Hibernate 5.2 minimum)
 * Micronaut Integration
+* See Jeff Brown's "Grails and 
+  Micronaut" talk !
 
 ---
 
