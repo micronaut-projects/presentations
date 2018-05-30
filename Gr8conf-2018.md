@@ -202,8 +202,8 @@ interface HelloClient {
 # How Small?
 
 * Smallest Micronaut Hello World JAR is 8MB when written Java or 12MB in Groovy
-* Can be run with as little as 10mb Max Heap (24mb for Groovy)
-* Startup time is sub-second for Java, around a second for Groovy
+* Can be run with as little as 10mb Max Heap (22mb for Groovy)
+* Startup time around a second for Java (a little more for Groovy)
 * All Dependency Injection, AOP and Proxy generation happens at compile time
 
 ---
@@ -242,9 +242,9 @@ interesting
 [.hide-footer]
 
 * Service Discovery - Consul and Eureka Supported; Route 53 Planned
-* Configuration Sharing - Consul Supported; Amazon & GCP Planned
+* Configuration Sharing - Consul Supported; Amazon ParameterStore Planned
 * Client Side Load Balancing - Integrated or Netflix Ribbon Supported
-* Support for Serverless Computing via AWS Lambda
+* Support for Serverless Computing; AWS Lambda Supported; Azure coming
 
 ---
 
@@ -264,7 +264,7 @@ interesting
 
 # The HTTP Server
 
-* Fully Reactive and non-blocking - Reactor and RxJava 2.x support
+* Fully Reactive and non-blocking - Reactor 3.x and RxJava 2.x support
 * Auto configuration for common databases
 
 ```groovy
@@ -284,7 +284,7 @@ Single<List<Pet>> pets() {
 
 * Client Implementations Produced at Compile Time
 * Service Discovery by Service ID
-* Automatic Client Side Load Balancing & Fallback
+* Automatic Client Side Load Balancing, Retry & Fallback
 
 ```java, [.highlight: 1, 3-4]
 @Client(id = "pets", path = "/v1")
@@ -322,14 +322,15 @@ URL updateStatus(Message status) {
 
 [.hide-footer]
 
-# Micronaut Roadmap
+# Micronaut 1.0 Milestone 1 Out Now
 
-- First Milestones in Q2
-- GA by the end of the year. Still todo:
-- AWS Route 53, 
-Google Metadata Server Support
-* Metrics & Distributed Tracing
-* JWT Token Auth
+- Compile Time DI & AOP
+- HTTP Client & Server
+- Service Discovery
+- Distributed Tracing
+- Serverless Functions
+- Data Access: SQL, MongoDB, 
+  Redis, Cassandra etc.
 
 ---
 
@@ -337,18 +338,45 @@ Google Metadata Server Support
 
 [.hide-footer]
 
-# Micronaut - Find Out More
+# Micronaut - 1.0 M1 on SDKman!
 
-- We have launched a Micronaut 
-  website at: http://micronaut.io
-- Register at the bottom 
-  to get notifications
-- Speak to us (OCi) if you wish to
-  use Micronaut in beta form
-- Check out Alvaro's talk about 
-  Micronaut on Saturday at 9:30am
+* The Micronaut CLI now available 
+  via SDKman!
+
+```bash
+$ curl -s "https://get.sdkman.io" | bash
+$ source "$HOME/.sdkman/bin/sdkman-init.sh"
+$ sdk install micronaut
+$ mn create-app hello-world
+```
+---
+# Micronaut Events 
+
+- Loads of upcoming Events
+- Checkout - http://micronaut.io/events.html
+- See Jeff Brown's "Grails and Micronaut" talk at Gr8conf
+
+![right,85%](images/events.png)
+
+<!-- [.hide-footer] -->
 
 ---
+
+![original](images/micronaut-logo-right.png)
+
+[.hide-footer]
+
+# Micronaut ROADMAP
+
+- Metrics Support
+- Functions: Alexa and Azure
+- Message Driven Microservices:
+  RabbitMQ and Kafka
+- WebSocket Support
+- Swagger/OpenAPI Doc
+
+---
+
 
 ![original](images/grails-logo-right-bg.png)
 
@@ -357,7 +385,7 @@ Google Metadata Server Support
 # What About Grails?
 
 * Grails is _awesome_, *mature* and *robust*
-... for Creating Monoliths
+... for Creating traditional applications
 * Not every Application needs 
 Microservices
 * You will want parts of Micronaut 
@@ -372,7 +400,7 @@ HTTP Client, Discovery Client etc.
 
 # Grails Status Update
 
-* Grails 3.3.3 just released
+* Grails 3.3.6 Coming Next Week
 * Users seeing measured improvement in 
   Memory consumption in production
 * More 3.3.x releases planned
@@ -385,7 +413,7 @@ HTTP Client, Discovery Client etc.
 
 # Grails 4.0 (Q4 2018)
 
-* Java 8 minimum, Java 9 support, Groovy 2.5
+* Java 8 minimum, Java 9/10 support, Groovy 2.5
 * Spring Boot 2 and Spring 5
 * GORM 7.0 (Hibernate 5.2 minimum)
 * Micronaut Integration
