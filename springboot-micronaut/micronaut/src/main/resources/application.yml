@@ -3,3 +3,9 @@ micronaut:
         name: micronaut
     server:
         port: 8081
+    router:
+        static:
+            resources:
+                enabled: true
+                mapping: /static/**
+                paths: classpath:public
