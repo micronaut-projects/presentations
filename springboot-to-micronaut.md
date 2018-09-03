@@ -728,10 +728,27 @@ return uriTemplate.expand(arguments);
 
 ----
 
-# SpringBoot
+# index.html Root Path "/" | Spring Boot
 
-org.springframework.stereotype.Service
+`src/main/resources/public/index.html`
 
-Micronaut @Singleton
+`src/main/resources/static/index.html`
 
+
+# index.html Root Path "/" | Micronaut
+
+```
+micronaut:
+    router:
+        static:
+            resources:
+                enabled: true
+                mapping: /**
+                paths: classpath:public
+```
 ----
+
+# SpringBoot
+org.springframework.stereotype.Service
+Micronaut @Singleton
+Or 
