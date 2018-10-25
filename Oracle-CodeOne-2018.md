@@ -342,6 +342,19 @@ URL updateStatus(Message status) {
 
 ---
 
+![right,99%](images/graal.png)
+
+# Micronaut + GraalVM 
+
+* Like Graal itself at the Experimental Phase
+* Mirconaut AOT compilation and refection free 
+  model makes it easier
+* A lot of Micronaut already working:
+  * HTTP Server, Client & Serverless
+  * Service Discovery
+  * DI and AOP
+---
+
 ![original](images/micronaut-logo-right.png)
 
 [.hide-footer]
