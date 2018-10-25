@@ -6,7 +6,7 @@ slidenumbers: false
 [.hide-footer]
 
 # [FIT] Introduction to Micronaut
-> Ultra-Lightweight Microservices
+> Ultra-Lightweight Microservices for the JVM
 -- by Graeme Rocher
 
 
@@ -16,14 +16,14 @@ slidenumbers: false
 
 [.hide-footer]
 
-# About Me
+# About Me - Graeme Rocher
 
-* Graeme Rocher
 * Creator of Grails (http://grails.org)
 * Creator of Micronaut (http://micronaut.io)
 * Author "The Definitive Guide to Grails"
 * Former SpringSource -> VMware -> Pivotal 
 * Senior Engineer at Object Computing (http://objectcomputing.com)
+* Just Received 2018 Oracle Groundbreaker award - Thanks!
 
 ---
 
@@ -146,7 +146,7 @@ and annotations become fat
 * But we love the programming 
 model and productivity so 
 we live with it
-* But ... why should we be 
+* So ... why should we be 
 more efficient?
 
 ---
@@ -229,8 +229,8 @@ interface HelloClient {
 # How Small?
 
 * Smallest Micronaut Hello World JAR is 10MB when written Java or 12MB in Groovy
-* Can be run with as little as 10mb Max Heap (22mb for Groovy)
-* Startup time around a second for Java (a little more for Groovy)
+* Can be run with as little as 10mb Max Heap with Kotlin or Java (22mb for Groovy)
+* Startup time around a second for Kotlin or Java (a little more for Groovy)
 * All Dependency Injection, AOP and Proxy generation happens at compile time
 
 ---
