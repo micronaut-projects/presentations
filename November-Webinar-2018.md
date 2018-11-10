@@ -1,20 +1,24 @@
-footer: © Object Computing Inc., 2018
+theme: OCI White
 slidenumbers: false
-
-![original](images/oci-big-center-center.png)
-
 [.hide-footer]
 
+![original](images/trainingbg.png)
+
+```
+```
 # [FIT] Introduction to Micronaut
 > Ultra-Lightweight Microservices for the JVM
+
+```
+```
 -- by Graeme Rocher
 
 
 ---
 
-![original](images/oci-bg.png)
+![original](images/trainingbg.png)
 
-[.hide-footer]
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 # About Me - Graeme Rocher
 
@@ -26,9 +30,9 @@ slidenumbers: false
 
 ---
 
-![original](images/oci-bg.png)
+![original](images/trainingbg.png)
 
-[.hide-footer]
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 # Agenda
 
@@ -40,9 +44,11 @@ slidenumbers: false
 
 ---
 
+![original](images/trainingbg.png)
+
 ![right,50%](images/2008.jpg)
 
-[.hide-footer]
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 # Then and Now
 
@@ -57,17 +63,23 @@ No Docker, No Microservices
 
 # So We Try to Adapt
 
-![original](images/elephant-bg.png)
+![original](images/trainingbg.png)
 
-[.hide-footer]
+[.text: #000000,  text-scale(0.8), alignment(left)]
+
+![right](images/elephant.jpg)
 
 * Let's try adapt existing legacy technologies for Microservices
 * Technologies like Spring, Jakarta EE etc were never optimized for low memory footprint Microservices
 
-
 ---
 
-# What to do, What to do?
+## What to do, 
+## What to do?
+
+![original](images/trainingbg.png)
+
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 Shall we:
 
@@ -79,9 +91,9 @@ Shall we:
 
 ---
 
-![original](images/oci-bg.png)
+![original](images/trainingbg.png)
 
-[.hide-footer]
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 # The Goal
 * Create a New Framework designed from the ground-up for Microservices and Serverless Computing
@@ -91,9 +103,11 @@ Shall we:
 * Zero Dependency
 * 12 Factor - https://12factor.net
 
-
-
 ---
+
+![original](images/trainingbg.png)
+
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 # The Analysis
 
@@ -103,11 +117,11 @@ To meet this goal we performed an analysis of Spring and Grails and the challeng
 
 ---
 
-# What Spring and Jakarta EE Do
+## What Spring and Jakarta EE Do
 
-![original](images/oci-bg.png)
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
-[.hide-footer]
+![original](images/trainingbg.png)
 
 Spring is an amazing technical achievement and does so many things, but does them _at Runtime_.
 
@@ -117,28 +131,27 @@ Spring is an amazing technical achievement and does so many things, but does the
 
 ---
 
-![original](images/startup-graph.png)
-
-[.hide-footer]
-
 # So What's the Problem?
 
+![original](images/trainingbg.png)
+
+![inline](images/startup-graph.png)
 
 ---
 
-![98%](images/frameworks.png)
+![original](images/trainingbg.png)
 
-[.hide-footer]
-
-
+![inline 98%](images/frameworks.png)
 
 ---
+
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 # The Micro Reality
 
-![original](images/fatcat-bg.png)
+![original](images/trainingbg.png)
 
-[.hide-footer]
+![right](images/fatcat.jpg)
 
 * Frameworks based on reflection 
 and annotations become fat
@@ -150,11 +163,18 @@ more efficient?
 
 ---
 
-# Imagine if Kubernetes or Docker had been written in Spring or Jakarta EE instead of Go?
+![original](images/trainingbg.png)
+
+### Imagine if Kubernetes or Docker had been written in Spring or Jakarta EE instead of Go?
 
 ---
 
-# Already Solved by Ahead of Time (AOT) Compilation
+![original](images/trainingbg.png)
+
+[.text: #000000,  text-scale(0.8), alignment(left)]
+
+## Already Solved by 
+## Ahead of Time (AOT) Compilation
 
 * The Android Community already solved the problem
 * Ahead of Time Compilation used extensively
@@ -165,18 +185,9 @@ more efficient?
 
 ---
 
+![original](images/trainingbg.png)
 
-![original](images/micronaut-bg.png)
-
-[.hide-footer] 
-
-<!-- # Introducing Micronaut -->
-
----
-
-![original](images/micronaut-logo-right.png)
-
-[.hide-footer]
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 # Introducing Micronaut
 * Designed from the ground up 
@@ -190,11 +201,12 @@ Reactive - Based on Netty
 
 ---
 
-![original](images/oci-micronaut-bg.png)
+![original](images/trainingbg.png)
 
-[.hide-footer]
+```
+```
 
-# [fit] DEMO
+# DEMO
 
 * Hello Micronaut 
 
@@ -202,7 +214,7 @@ Reactive - Based on Netty
 
 # Hello Micronaut
 
-![original](images/oci-micronaut-bg.png)
+![original](images/trainingbg.png)
 
 [.hide-footer]
 
@@ -221,9 +233,9 @@ interface HelloClient {
 
 ---
 
-![original](images/oci-micronaut-bg.png)
+![original](images/trainingbg.png)
 
-[.hide-footer]
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 # How Small?
 
@@ -234,11 +246,12 @@ interface HelloClient {
 
 ---
 
-![original](images/oci-micronaut-bg.png)
+![original](images/trainingbg.png)
 
-[.hide-footer]
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
-# What Micronaut Computes at Compile Time
+# What Micronaut Computes
+# Compile Time
 
 * All Dependency & Configuration Injection
 * Annotation Metadata (Meta annotations)
@@ -249,9 +262,11 @@ interface HelloClient {
 
 ---
 
-![original](images/facepalm-bg.png)
+![original](images/trainingbg.png)
 
-[.hide-footer]
+![right](images/facepalm.jpg)
+
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 # Not Another Framework!?
 
@@ -265,9 +280,11 @@ interesting
 
 ---
 
+[.text: #000000,  text-scale(0.8), alignment(left)]
+
 # Natively Cloud Native
 
-![original](images/oci-micronaut-bg.png)
+![original](images/trainingbg.png)
 
 [.hide-footer]
 
@@ -278,21 +295,22 @@ interesting
 
 ---
 
-![original](images/oci-micronaut-bg.png)
+![original](images/trainingbg.png)
 
-[.hide-footer]
+```
+```
 
-# [fit] DEMO 
+# DEMO 
 
 * Micronaut Pet Store
 
 ---
 
+![original](images/trainingbg.png)
+
+[.text: #000000,  text-scale(0.8), alignment(left)]
+
 # Serverless Computing
-
-![original](images/oci-topright.png)
-
-[.hide-footer]
 
 * Write Functions and Run them locally or as regular server applications
 * Deploy Functions to AWS Lambda - after warm-up functions execute in milliseconds
@@ -310,7 +328,11 @@ URL updateStatus(Message status) {
 
 ---
 
+![original](images/trainingbg.png)
+
 ![right,99%](images/graal.png)
+
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 # GraalVM
 
@@ -320,6 +342,10 @@ URL updateStatus(Message status) {
 * https://www.graalvm.org 
 
 ---
+
+[.text: #000000,  text-scale(0.8), alignment(left)]
+
+![original](images/trainingbg.png)
 
 ![right,99%](images/graal.png)
 
@@ -333,16 +359,24 @@ URL updateStatus(Message status) {
 
 ---
 
+![original](images/trainingbg.png)
+
 ![right,99%](images/graal.png)
 
-[.hide-footer]
 
-# [fit] DEMO 
+```
+```
+
+# DEMO 
 
 
 * Micronaut + GraalVM
 
 ---
+
+[.text: #000000,  text-scale(0.8), alignment(left)]
+
+![original](images/trainingbg.png)
 
 ![right,99%](images/graal.png)
 
@@ -355,11 +389,12 @@ URL updateStatus(Message status) {
   * HTTP Server, Client & Serverless
   * Service Discovery
   * DI and AOP
+
 ---
 
-![original](images/micronaut-logo-right.png)
+![original](images/trainingbg.png)
 
-[.hide-footer]
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 # Micronaut 1.0 Out Now
 
@@ -373,9 +408,7 @@ URL updateStatus(Message status) {
 
 ---
 
-![original](images/micronaut-logo-right.png)
-
-[.hide-footer]
+![original](images/trainingbg.png)
 
 # Micronaut 1.0 on SDKman!
 
@@ -388,7 +421,12 @@ $ source "$HOME/.sdkman/bin/sdkman-init.sh"
 $ sdk install micronaut
 $ mn create-app hello-world
 ```
+
 ---
+
+![original](images/trainingbg.png)
+
+[.text: #000000,  text-scale(0.8), alignment(left)]
 
 # Micronaut Resources
 
@@ -400,6 +438,11 @@ $ mn create-app hello-world
 - Examples: [https://github.com/micronaut-projects/micronaut-examples](https://github.com/micronaut-projects/micronaut-examples)
 
 ---
+
+[.text: #000000,  text-scale(0.8), alignment(left)]
+
+![original](images/trainingbg.png)
+
 # Micronaut Events 
 
 - Loads of upcoming Events
@@ -407,11 +450,15 @@ $ mn create-app hello-world
 - Webinar 
   - https://objectcomputing.com/resources/events/webinars/introduction-to-micronaut
 	
-![right,85%](images/events.png)
+![right](images/events.png)
 
 <!-- [.hide-footer] -->
 
 ---	
+
+[.text: #000000,  text-scale(0.8), alignment(left)]
+
+![original](images/trainingbg.png)
 
 # Summary
 
@@ -423,7 +470,7 @@ $ mn create-app hello-world
 
 ---
 
-![original](images/oci-big-center-bottom-bg.png)
+![original](images/trainingbg.png)
 
 [.hide-footer]
 
