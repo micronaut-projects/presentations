@@ -407,6 +407,16 @@ $ mn create-app hello-world
 ```
 ---
 
+# Micronaut project is healthy
+
+- ~2 years of development by several OCI engineers.
+- 70 contributors (19 from OCI).
+- ~1300 stars on GitHub.
+
+![center, inline, original](images/code-frequency.png)
+
+---
+
 # Micronaut Resources
 
 - Gitter Community: [https://gitter.im/micronautfw](https://gitter.im/micronautfw)
