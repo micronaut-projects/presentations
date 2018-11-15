@@ -1,0 +1,21 @@
+import com.groovycalamari.includereplace.IncludeReplace
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.groovycalamari:includereplace:1.0-SNAPSHOT'
+    }
+}
+apply plugin: 'base'
+apply plugin: 'com.groovycalamari.includereplace'
+
+task generateDecksetSlides(type: IncludeReplace) {
+    source = file("${rootProject.projectDir}/springboot-to-micronaut.md")
+    destinationDir = file("${buildDir}/deckset")
+    sourceCodeDir = file("${rootProject.projectDir}/code")
+}
+
+build.dependsOn(generateDecksetSlides)
