@@ -1,0 +1,11 @@
+micronaut:
+    application:
+        name: micronaut
+    server:
+        port: 8081
+    router:
+        static:
+            resources:
+                enabled: true
+                mapping: /**
+                paths: classpath:public
