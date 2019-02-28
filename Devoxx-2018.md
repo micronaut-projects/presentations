@@ -118,20 +118,15 @@ Spring is an amazing technical achievement and does so many things, but does the
 
 ---
 
-![original](images/startup-graph.png)
+![80%](images/startup-graph.png)
 
 [.hide-footer]
-
-# So What's the Problem?
-
 
 ---
 
 ![98%](images/frameworks.png)
 
 [.hide-footer]
-
-
 
 ---
 
@@ -374,6 +369,20 @@ URL updateStatus(Message status) {
 
 ---
 
+# Micronaut for Spring
+
+![original](images/oci-micronaut-bg.png)
+
+[.hide-footer]
+
+* Take the Spring programming model to new places!
+* GraalVM
+* Android
+* AOT
+* Serverless
+
+---
+
 ![original](images/micronaut-logo-right.png)
 
 [.hide-footer]
@@ -414,6 +423,18 @@ $ mn create-app hello-world
 - ~1300 stars on GitHub.
 
 ![center, inline, original](images/code-frequency.png)
+
+---
+
+# Micronaut ROADMAP
+
+- Micronaut for Spring 1.0 GA
+- AOT Improvements
+- OpenID Connect Support
+- RabbitMQ Support
+- Improved Google Cloud Support
+- GRPC Support
+- https://github.com/micronaut-projects/micronaut-core/projects/5
 
 ---
 
