@@ -84,7 +84,7 @@ slidenumbers: false
 # What Can/Should You Do 
 
 * Build Configurations (Instead of Plugins)
-* Declarative Clients
+* Use Declarative Clients
 	- HTTP
 	- Kafka
 	- RabbitMQ
@@ -255,6 +255,23 @@ interface AnimalClient {
 * Blocking or Non-Blocking (RxJava, Reactor or Future)
 
 > https://github.com/micronaut-projects/micronaut-rabbitmq
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut Message Consumers
+
+![original](images/oci-backgrounds/oci-white.png)
+
+* Micronaut Supports Message-Drive Microservices
+* Can be run as standalone processes (No http server)
+* Use `@RabbitListener` for Rabbit
+* Use `@KafkaListener` for Kafka
+
+> https://docs.micronaut.io/1.1.x/guide/index.html#messaging
+
+![right, 35%](images/micronaut-stack-blue.png)
 
 ----
 
