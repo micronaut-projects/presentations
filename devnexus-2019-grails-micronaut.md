@@ -114,6 +114,7 @@ slidenumbers: false
 ![original](images/oci-backgrounds/oci-white.png)
 
 # `@ConfigurationProperties`
+### Type Safe Configuration
 
 ```java
 @ConfigurationProperties("example")
@@ -125,6 +126,26 @@ class ExampleConfiguration {
 ApplicationContext context = ApplicationContext.run("example.name":"Demo")
 FooConfiguration config = context.getBean(FooConfiguration)
 assert config.name == 'Demo'
+```
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# `@Requires`
+### Conditional Beans Made Easy
+
+```groovy
+@Requires(property="example.enabled")
+@Requires(beans=DataSource)
+@Requires(missingBeans=Example)
+@Singleton
+class DefaultExampleBean implements Example {
+	...
+}
+
+def context = ApplicationContext.run("example.enabled":"true")
+Example example = context.getBean(Example)
 ```
 
 ----
