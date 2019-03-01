@@ -300,6 +300,12 @@ interface AnimalClient {
 
 ----
 
+![original](images/oci-backgrounds/oci-demo-dark.png)
+
+# [FIT] **Q & A**
+
+----
+
 ![original](images/oci-backgrounds/oci-connect.png)
 
 ----
