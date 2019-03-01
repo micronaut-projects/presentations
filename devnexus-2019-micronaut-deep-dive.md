@@ -217,14 +217,28 @@ Optional<Argument> typeVariable = property.asArgument()
 
 # Micronaut Dependency Injection
 
-* Precomputes 
-	* Annotation Metadata (see `AnnotationMetadata` interface)
-	* Generic Types (No Type Erasure!)
-	* Class Loading Requirements (No Dynamic Class Loading!)
-
-
+* Precomputes Everything
+* Annotation Metadata (see `AnnotationMetadata` interface)
+* Generic Types (No Type Erasure!)
+* Class Loading Requirements (No Dynamic Class Loading!)
 
 ![right, 35%](images/micronaut-stack-blue.png)
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# `BeanDefinition` 
+
+```groovy
+ApplicationContext ctx = ApplicationContext.run();
+
+BeanDefinition<MyBean> definition 
+	= ctx.getBeanDefinition(MyBean.class);
+```
+
+* Contains precompuated `AnnotationMetadata` and generic type info
+* Used by `ApplicationContext` to instantiate beans
 
 ----
 
@@ -233,14 +247,33 @@ Optional<Argument> typeVariable = property.asArgument()
 # `@Executable` 
 
 ```java
-@Scheduled(fixedRate = "5m") // @Scheluded annotated with @Executable
+@Scheduled(fixedRate = "5m") // @Scheduled annotated with @Executable
 void everyFiveMinutes() {
     messageService.sendMessage("Hello World");
 }
 ```
-* Common stereotype annotation
-* Identifies  where framework invokes your code
-* Processed with a `ExecutableMethodProcessor`
+* Common Stereotype annotation
+* Identifies where framework invokes your code
+* Produces reflection-free `ExectubleMethod` instance
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# `@ExecutableMethodProcessor` 
+
+```java
+public class ScheduledMethodProcessor 
+	implements ExecutableMethodProcessor<Scheduled> {
+	public void process(BeanDefinition<?> beanDefinition, 
+						ExecutableMethod<?, ?> method) {
+		// do stuff with the bean
+	}
+}
+```
+
+* Processes only methods annotated by type argument
+* In the above case setting up a scheduled job
 
 ----
 
@@ -252,12 +285,81 @@ void everyFiveMinutes() {
 
 ----
 
+![original](images/oci-backgrounds/oci-white.png)
+
+# `@Around` 
+
+```java
+@Retryable // @Retryable is annotated with @Around
+void invokeMe() {
+    // do stuff
+}
+```
+* Intercepts a method with a `MethodInterceptor`
+* No runtime proxies (compile time proxies) or reflection needed
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# `@Around` 
+
+```java
+@Around
+@Type(DefaultRetryInterceptor.class)
+public @interface Retryable {
+	// annotation attributes
+}
+```
+* Use `@Type` to specify the implementation
+* At compilation Micronaut applies the AOP advise
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# `@Introduction` 
+
+```java
+@Client("/hello") // @Client is annotated with @Introduction
+public interface HelloClient {
+
+    @Get("/")
+    Single hello();
+}
+
+```
+* Introduction AOP advise implements abstract behaviour 
+* Interfaces or abstract classes
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# `@Introduction` 
+
+```groovy
+@Introduction
+@Type(HttpClientIntroductionAdvice.class)
+@Recoverable
+@Singleton
+public @interface Client {
+}
+
+```
+* `@Type` used again to specify implementation
+* Can apply other annotations as meta annotations
+
+----
+
+
+
 # Summary
 
 * Micronaut Provides an Awesome Foundation
-* Sacrafice Compilation Speed to Gain so Much More
-* Solves Problems with Spring and Jakarta EE
-* Opens the Door to GraalVM native
+* Sacrifices Compilation Speed to Gain so Much More
+* Solves Problems with Spring, Jakarta EE and Java in General
+* Opens the Door to GraalVM Native
 
 ----
 
@@ -265,9 +367,7 @@ void everyFiveMinutes() {
 
 # [FIT] **Q & A**
 
-
 ----
-
 
 ![original](images/oci-backgrounds/oci-connect.png)
 
