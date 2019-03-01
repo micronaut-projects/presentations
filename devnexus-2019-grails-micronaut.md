@@ -284,7 +284,7 @@ interface AnimalClient {
 * Compile Time 
 * Reflection and Runtime Proxy Free
 * Java, Groovy or Kotlin
-* Build with Micronaut AOP
+* Built with Micronaut AOP
 
 > https://docs.micronaut.io/1.1.x/guide/index.html#aop
 
