@@ -1,0 +1,5 @@
+micronaut:
+    application:
+        name: deepdive
+jackson:
+    module-scan: false
