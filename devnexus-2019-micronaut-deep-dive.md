@@ -109,7 +109,7 @@ slidenumbers: false
 * However Most Existing Tools are based around
 	* Reflection
 	* Runtime Proxies 
-	* Runtime Byte Code Generation
+	* Runtime Byte Code Generation (bytebuddy/cglib)
 	
 
 ![right, 20%](images/java.png)
@@ -125,6 +125,21 @@ slidenumbers: false
 	* Converts Java -> native machine code using AOT
 * Works well with Micronaut
 * Startup time 20ms and Memory Consumption 18MB!
+
+> http://www.graalvm.org
+
+![right, 100%](images/graal.png)
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut and GraalVM 
+
+* GraalVM is cool and a project to keep an eye on
+* Still in beta and experimental
+* Micronaut optimizes for GraalVM, but 
+also optimizes for regular Java (what most people use today)
 
 > http://www.graalvm.org
 
@@ -239,6 +254,57 @@ BeanDefinition<MyBean> definition
 
 * Contains precompuated `AnnotationMetadata` and generic type info
 * Used by `ApplicationContext` to instantiate beans
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# `BeanDefinition` 
+
+* Bean definitions produced for any `@Singleton`
+* Constructor injection used by default
+* Use `@Factory` for beans you cannot annotate
+* Compliant with `javax.inject` spec and TCK
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# `@ConfigurationProperties`
+### Type Safe Configuration
+
+```java
+@ConfigurationProperties("example")
+class ExampleConfiguration {
+	// getters/setters omitted
+	private String name; 
+}
+
+
+ApplicationContext context = ApplicationContext.run("example.name":"Demo");
+FooConfiguration config = context.getBean(FooConfiguration);
+assert config.name == 'Demo'
+```
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# `@Requires`
+### Conditional Beans Made Easy
+
+```java
+@Requires(property="example.enabled")
+@Requires(beans=DataSource.class)
+@Requires(missingBeans=Example.class)
+@Singleton
+class DefaultExampleBean implements Example {
+	...
+}
+
+ApplicationContext context = ApplicationContext.run("example.enabled":"true")
+Example example = context.getBean(Example)
+```
 
 ----
 

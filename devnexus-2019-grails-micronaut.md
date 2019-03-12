@@ -52,6 +52,18 @@ slidenumbers: false
 ![right, 35%](images/micronaut-stack-blue.png)
 
 ----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Why Micronaut?
+
+* Micronaut is uses no reflection, no runtime proxies, no runtime byte code generation etc.
+* Eliminating these leads to reduced memory consumption and faster startup
+* Increasingly important for Microservices, Serverless, IoT, any low-memory footprint environment
+
+![right, 35%](images/micronaut-stack-blue.png)
+
+----
 ![original](images/oci-backgrounds/oci-white.png)
 
 # Micronaut vs Grails
@@ -209,6 +221,18 @@ interface GithubClient {
 * Blocking or Non-Blocking (RxJava, Reactor or Future)
 * Reflection / Runtime Proxy Free 
 
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# `@Client`
+
+* Uses Micronaut's low-level HTTP client (`RxHttpClient`) under the hood
+* Built with Micronaut AOP (reflection/runtime proxy free)
+* Works on GraalVM `nativeimage`
+* Integrates with Tracing, Metrics, Service Discovery etc.
+
+![right, 35%](images/micronaut-stack-blue.png)
 
 ----
 
@@ -265,7 +289,7 @@ interface AnimalClient {
 ![original](images/oci-backgrounds/oci-white.png)
 
 * Micronaut Supports Message-Drive Microservices
-* Can be run as standalone processes (No http server)
+* Can be run as standalone processes (No HTTP server)
 * Use `@RabbitListener` for Rabbit
 * Use `@KafkaListener` for Kafka
 
@@ -295,6 +319,7 @@ interface AnimalClient {
 # Summary
 
 * Micronaut Provides an Awesome Foundation
+* Building Blocks to Create Libraries, Configurations and Clients
 * Most Micronaut Features Available in Grails
 * Build Micronaut Libraries not Plugins
 
