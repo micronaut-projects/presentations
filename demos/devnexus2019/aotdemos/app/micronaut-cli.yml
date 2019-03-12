@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: deepdive
+---
+testFramework: junit
+sourceLanguage: java
