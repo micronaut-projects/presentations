@@ -10,8 +10,8 @@ slidenumbers: false
 ```
 ```
 ```
-# [FIT] **GRAILS 4 AND MICRONAUT**
-> _Getting the best out of Grails 4 and Micronaut_
+# [FIT] **GRAILS 4 STATUS UPDATE**
+> _Bringing Micronaut Goodness to Grails_
 
 ```
 ```
@@ -146,13 +146,6 @@ slidenumbers: false
 ![right, 35%](images/micronaut-stack-blue.png)
 
 ----
-
-![original](images/oci-backgrounds/oci-demo-dark.png)
-
-# [FIT] **DEMO**
-## **Micronaut Configurations with Grails**
-
-----
 ![original](images/oci-backgrounds/oci-white.png)
 # Micronaut Configurations
 
@@ -244,16 +237,14 @@ interface GithubClient {
 
 ----
 
-![original](images/oci-backgrounds/oci-demo-dark.png)
-
-# [FIT] **DEMO**
-## **Micronaut HTTP Client**
-
-----
-
 ![original](images/oci-backgrounds/oci-white.png)
 
 # `@Client`
+
+
+```groovy
+compile "io.micronaut:micronaut-http-client"
+```
 
 * Uses Micronaut's low-level HTTP client (`RxHttpClient`) under the hood
 * Built with Micronaut AOP (reflection/runtime proxy free)
@@ -284,17 +275,10 @@ public interface ProductClient {
 
 ----
 
-![original](images/oci-backgrounds/oci-demo-dark.png)
-
-# [FIT] **DEMO**
-## **Micronaut Kafka Client**
-
-----
-
 ![original](images/oci-backgrounds/oci-white.png)
 
 # `@RabbitClient`
-### Declarative Compile Time Kafka Clients
+### Declarative Compile Time Rabbit Clients
 
 ```groovy
 @RabbitClient("animals") 
@@ -307,6 +291,13 @@ interface AnimalClient {
 * Blocking or Non-Blocking (RxJava, Reactor or Future)
 
 > https://github.com/micronaut-projects/micronaut-rabbitmq
+
+----
+
+![original](images/oci-backgrounds/oci-demo-dark.png)
+
+# [FIT] **DEMO**
+## **Micronaut and Grails**
 
 ----
 
@@ -324,6 +315,7 @@ interface AnimalClient {
 > https://docs.micronaut.io/1.1.x/guide/index.html#messaging
 
 ![right, 35%](images/micronaut-stack-blue.png)
+
 
 ----
 
