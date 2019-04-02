@@ -26,6 +26,13 @@ slidenumbers: false
 * Creator of Grails and Micronaut
 * Principal Engineer at Object Computing
 * Oracle Groundbreaker Award Winner
+* Former G2One Founder -> SpringSource -> Pivotal
+
+---
+
+# **Bergara, Basque Country**
+
+![original](images/bergara.jpg)
 
 ---
 
@@ -86,36 +93,6 @@ slidenumbers: false
 
 ----
 
-![original](images/oci-backgrounds/oci-white.png)
-
-# Micronaut 1.1 Improvements
-
-* BeanIntrospection API  - reflection-free replacement for `java.beans.Introspector`
-* Complete elimination of framework level dynamic classloading 
-* Modularization (loads of modules!)
-* Testing Improvements `@MicronautTest`
-
-![right, 35%](images/micronaut-stack-blue.png)
-
-
-----
-
-![original](images/oci-backgrounds/oci-white.png)
-
-# New Micronaut 1.1 Modules
-
-* GRPC - `micronaut-grpc`
-* GraphQL - `micronaut-graphql`
-* RabbitMQ - `micronaut-graphql`
-* AWS - `micronaut-aws`
-* GPC - `micronaut-gpc`
-
-> https://github.com/micronaut-projects 
-
-![right, 35%](images/micronaut-stack-blue.png)
-
-----
-
 
 ![original](images/oci-backgrounds/oci-white.png)
 
@@ -129,6 +106,42 @@ slidenumbers: false
 >> https://youtu.be/IPOvrK3S3gQ?t=1109
 
 ![right, 20%](images/java.png)
+
+---
+
+# The Micro Reality
+
+![original](images/fatcat-bg-white.png)
+
+[.hide-footer]
+
+* Frameworks based on reflection 
+and annotations become fat
+* But we love the programming 
+model and productivity so 
+we live with it
+* So ... why should we be 
+more efficient?
+
+---
+
+![80%](images/startup-graph.png)
+
+[.hide-footer]
+
+----
+
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut's Impact
+
+* We announced Micronaut at Greach 2018
+* Open Sourced 28th of May 2018
+* Red Hat and Pivotal have been scrambling ever since
+* Micronaut is changing the face of server side Java
+
+![right, 35%](images/micronaut-stack-blue.png)
 
 ----
 
@@ -193,6 +206,36 @@ also optimizes for regular Java (what most people use today)
 
 ![right, 20%](images/java.png)
 
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut 1.1 Improvements
+
+* BeanIntrospection API  - reflection-free replacement for `java.beans.Introspector`
+* Complete elimination of framework level dynamic classloading 
+* Modularization (loads of modules!)
+* Testing Improvements `@MicronautTest`
+
+![right, 35%](images/micronaut-stack-blue.png)
+
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# New Micronaut 1.1 Modules
+
+* GRPC - `micronaut-grpc`
+* GraphQL - `micronaut-graphql`
+* RabbitMQ - `micronaut-graphql`
+* AWS - `micronaut-aws`
+* GPC - `micronaut-gpc`
+
+> https://github.com/micronaut-projects 
+
+![right, 35%](images/micronaut-stack-blue.png)
+
 
 ----
 
@@ -250,13 +293,6 @@ Optional<Argument> typeVariable = property.asArgument()
 ```
 * AOT Computed Generic Type information
 * No type erasure / crazly reflection logic to get the type argument
-
-----
-
-![original](images/oci-backgrounds/oci-demo-dark.png)
-
-# [FIT] **DEMO**
-## **Micronaut Dependency Injection**
 
 ----
 
