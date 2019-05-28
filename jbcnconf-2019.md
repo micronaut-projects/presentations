@@ -10,8 +10,7 @@ slidenumbers: false
 ```
 ```
 ```
-# [FIT] **Evolving Software for the**
-# [FIT] **Microservice and Serverless Era**
+# [FIT] **Introduction to Micronaut**
 
 ```
 ```
@@ -26,6 +25,7 @@ slidenumbers: false
 * Creator of Grails and Micronaut
 * Principal Engineer at Object Computing
 * Oracle Groundbreaker Award Winner
+* Based in Pais Vasco
 
 ---
 
@@ -34,9 +34,9 @@ slidenumbers: false
 # Agenda
 
 * Challenges Facing Java and Software in General
-* Serverless vs. Traditional Models
-* Emerging Solutions (Micronaut and GraalVM)
-* Demos!
+* Microservces and Serverless vs. Traditional Models
+* Micronaut Demos!
+* Q & A!
 
 ----
 
@@ -159,16 +159,29 @@ more efficient?
 
 ----
 
+
+# Why is Reflection a Problem?
+
+* Today the JDK is OpenJDK!
+* Just take a look...
+
+> http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/lang/Class.java#l2471
+
+* **All** Reflective data initialized on first access and held in soft references (yes every field, method etc.)
+* Won't be GC'ed until your application is low on memory!
+
+----
+
 ![original](images/oci-backgrounds/oci-white.png)
 
-# Java's Problems
+# Java's "Problems"
 
 * Greatly Exaggerated (Java has been dead forever)
 * Java can be Fast! (see Android and Micronaut)
 * However Most Existing Tools are based around
 	* Reflection
 	* Runtime Proxies 
-	* Runtime Byte Code Generation (bytebuddy/cglib)
+	* Runtime Byte Code Generation (bytebuddy/cglib/javassist)
 	
 
 ![right, 20%](images/java.png)
@@ -229,10 +242,6 @@ and less at runtime
 
 ----
 
-
-
-
-
 ![original](images/oci-backgrounds/oci-white.png)
 
 # Micronaut is...
@@ -245,10 +254,7 @@ and less at runtime
 
 ![right, 35%](images/micronaut-stack-blue.png)
 
-
-
 ----
-
 
 # Micronaut AOT Computation
 
@@ -297,9 +303,9 @@ and less at runtime
 
 # Micronaut's Impact
 
-* We announced Micronaut at March 2018
-* Open Sourced 28th of May 2018
-* Sparked improvements from Red Hat (with Quarkus) and Pivotal 
+* We announced Micronaut on March 2018
+* Open Sourced 28th of May 2018 (a year ago!)
+* Sparked industry wide improvements from Red Hat (with Quarkus) and Pivotal (Spring Boot 2.2)
 * Micronaut is changing the face of server side Java
 
 ![right, 35%](images/micronaut-stack-blue.png)
@@ -325,30 +331,42 @@ and less at runtime
 ![original](images/oci-backgrounds/oci-demo-dark.png)
 
 # [FIT] **DEMO**
-## **Micronaut and GraalVM**
+## **Micronaut**
 
 ----
-
+# Hello Micronaut
 
 ![original](images/oci-backgrounds/oci-white.png)
 
-# GraalVM 
+[.hide-footer]
 
-* GraalVM is promising and a project to keep an eye on
-* Still in beta and experimental
-* Micronaut optimizes for GraalVM, but 
-also optimizes for regular Java (what most people use today)
+```kotlin
+@Controller
+class HelloController {
+    @Get("/hello/{name}")
+    String hello(String name) { 
+    	return "Hello " + name; 
+    }
+}
+@Client("/") // Client Generated at Compile Time
+interface HelloClient {
+  @Get("/hello/{name}")
+  String hello(String name);
+}
+```
 
-> http://www.graalvm.org
+---
 
-![right, 100%](images/graal.png)
+![original](images/oci-backgrounds/oci-white.png)
 
-----
+[.hide-footer]
 
-![original](images/oci-backgrounds/oci-demo-dark.png)
+# How Small?
 
-# [FIT] **DEMO**
-## **Micronaut Serverless Function**
+* Smallest Micronaut Hello World JAR is 12MB when written Java or 14MB in Groovy
+* Can be run with as little as 10mb Max Heap with Kotlin or Java (20mb for Groovy)
+* Startup time subsecond for Kotlin or Java (a little more for Groovy)
+* All Dependency Injection, AOP and Proxy generation happens at compile time
 
 ----
 ![original](images/oci-backgrounds/oci-white.png)
@@ -360,12 +378,12 @@ also optimizes for regular Java (what most people use today)
 | --- | --- | --- | 
 | OpenJDK | +/- 800ms | +/- 100mb
 | Eclipse OpenJ9 with Class Sharing | +/- 300ms | +/- 70mb
-| Graal Native | +/- 20ms | +/- 15mb
+| Graal Native | +/- 15ms | +/- 15mb
 
 ----
 ![original](images/oci-backgrounds/oci-white.png)
 
-# Micronaut Cloud Function 
+# Micronaut AWS Lambda
 # Cold Starts
 
 | Style | Cold Start |
@@ -374,7 +392,49 @@ also optimizes for regular Java (what most people use today)
 | API Gateway | +/- 800ms | 
 | API Gateway + Graal Custom Runtime | +/- 150ms |
 
+---
+
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut 1.1 Out Now and Production-Ready
+
+- Compile Time DI & AOP
+- HTTP Client & Server
+- GRPC and GraphQL Support
+- RabbitMQ and Improved Kafka Support
+- Micronaut 1.1.2 supports GraalVM 19 native (experimental status)
+
+
+![right, 35%](images/micronaut-stack-blue.png)
+
+
+---
+
+# Micronaut project is healthy
+
+- ~2 years of development by several OCI engineers.
+- 128 contributors (19 from OCI).
+- ~2350 stars on GitHub.
+- ~6000 commits.
+- More Exciting Announcements in 2019
+- Made in Spain (partly ;-)
+
+![right,90%](images/code-frequency.png)
+
+---
+
+# Micronaut Resources
+
+- Gitter Community: [https://gitter.im/micronautfw](https://gitter.im/micronautfw)
+- User Guide: [http://micronaut.io/documentation.html](http://micronaut.io/documentation.html)
+- Micronaut Guides: [http://guides.micronaut.io](http://guides.micronaut.io)
+- FAQ: [http://micronaut.io/faq.html](http://micronaut.io/faq.html)
+- Github: [https://github.com/micronaut-projects/micronaut-core](https://github.com/micronaut-projects/micronaut-core)
+- Examples: [https://github.com/micronaut-projects/micronaut-examples](https://github.com/micronaut-projects/micronaut-examples)
+
 ----
+
 
 # Summary
 
@@ -385,6 +445,13 @@ also optimizes for regular Java (what most people use today)
 * Going native an option for the future with GraalVM
 
 ----
+
+![original](images/oci-backgrounds/oci-demo-dark.png)
+
+# [FIT] **Q & A**
+## **Micronaut**
+----
+
 
 ![original](images/oci-backgrounds/oci-connect.png)
 
