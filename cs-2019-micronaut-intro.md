@@ -10,8 +10,9 @@ slidenumbers: false
 ```
 ```
 ```
-# [FIT] **Introduction to Micronaut**
-# [FIT] **Building a Framework for the Microservice and Serverless Era**
+# [FIT] **Evolving Java for the Microservice**
+# [FIT] **and Serverless Era**
+
 
 
 ```
@@ -461,7 +462,6 @@ GraalVM Substrate | 15MB | 21ms
 * Sacrifices Compilation Speed to Gain so Much More
 * Solves Problems with Spring, Jakarta EE and Java in General
 * Opens the Door to GraalVM Native
-* Come learn more in my "Micronaut Deep Dive" talk at 6PM!
 
 ----
 
