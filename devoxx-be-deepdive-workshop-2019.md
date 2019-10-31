@@ -59,7 +59,7 @@ slidenumbers: false
 * Micronaut AOP
 * Bean Validation
 * Bean Events and Listeners
-* 10 Minute Break
+* Followed by a 10 Minute Break
 
 
 ![right, 35%](images/micronaut-stack-blue.png)
@@ -86,7 +86,7 @@ slidenumbers: false
 
 # Agenda
 
-## Part 4 - 45 Minutes
+## Part 4 - 35 Minutes
 
 * Introducing Micronaut Data
 * Micronaut Data JPA
@@ -278,6 +278,10 @@ annotationProcessor "io.micronaut:micronaut-inject-java:1.2.5" // Gradle
 
 ----
 
+![FIT](images/micronaut-howitworks.png)
+
+----
+
 ![original](images/oci-backgrounds/oci-white.png)
 
 # Micronaut Test
@@ -338,12 +342,28 @@ class MathServiceTest {
 ```java
 @Introspected
 class MyBean {
-    private List<String> names; //getter/setter omitted
+    private String name; //getter/setter omitted
 }
 ```
 * AOT Reflection-Free replacement for `java.beans.Introspector`
 * Set/get bean properties, create instances
 * Includes `AnnotationMetadata`
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# `@Introspected` 
+
+```groovy
+BeanIntrospection<MyBean> bi = 
+	BeanIntrospection.getIntrospection(MyBean.class);
+MyBean bean = bi.instantiate();
+bi.getRequiredProperty("name")
+   .set(bean, "Some Value");
+```
+* Read/Write bean properties without reflection
+* Supports Jackson JSON marshalling without reflection
 
 ----
 
@@ -723,6 +743,18 @@ public class PersonService {
 ```
 * `@Validated` AOP advice implicitly added to any bean that uses `javax.validation`.
 
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Other Advice Types
+
+* `@Cacheable` - cache operations (support for Redis, in-memory etc.)
+* `@Transactional` - use standard `javax.transactional`, Spring's or which you want
+* `@Retryable` - Built in retry support
+* `@CircuitBreaker` - Circuit breaker pattern
+* `@Async` - Makes events execute asynchronously
+
 
 ----
 
@@ -884,7 +916,212 @@ public interface HelloClient {
 
 ----
 
+![original](images/oci-backgrounds/oci-demo-dark.png)
 
+# [FIT] **DEMO**
+## **Micronaut Service Discovery**
+
+---
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut Service Discovery
+
+* Support for Consul, Kubernetes and Eureka
+* Configuration Support for Consul, Kubernetes, Vault, 
+Spring Cloud Config Server and AWS ParameterStore
+* Native Client Side Load Balancing
+* Tracing with Zipkin or Jaeger
+
+![right, 35%](images/micronaut-stack-blue.png)
+
+---
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut Management
+
+* Simply add `micronaut-management`
+
+Endpoint|Description
+---|---|
+`/info` | Basic information about the app
+`/health` | Health Check support
+`/loggers` | View and Mutate log config
+`/metrics` | Metrics with Micrometer
+`/env` | Resolved configuration
+`/refresh` | Refresh the app state
+`/routes` | View active routes
+
+----
+
+![original](images/oci-backgrounds/oci-demo-dark.png)
+
+# [FIT] **DEMO**
+## **Micronaut OpenAPI**
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut OpenAPI Setup
+
+* Just another annotation processor extension
+
+```groovy
+annotationProcessor "io.micronaut.configuration:micronaut-openapi:1.2.2" // Gradle
+```
+```xml
+<annotationProcessorPaths> <!-- Maven -->
+      <path>
+        <groupId>io.micronaut.configuration</groupId>
+        <artifactId>micronaut-openapi</artifactId>
+        <version>1.2.2</version>
+      </path>
+      ...
+```
+
+---
+
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut OpenAPI
+
+* Produces `swagger.yml` at compilation time
+* Easy to expose this static file to Swagger UI.
+* Doing the work at compilation time == less memory consumption
+* Uses Micronaut `TypeElementVisitor` API
+
+![right, 35%](images/micronaut-stack-blue.png)
+
+---
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Part 4 - 35 Minutes
+
+* Introducing Micronaut Data
+* Micronaut Data JPA
+* Micronaut Data JDBC
+* Micronaut & GraalVM Native Image
+
+![right, 35%](images/micronaut-stack-blue.png)
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Existing Data Access Solutions
+
+* Spring Data, GORM etc.
+* Rely heavily on reflection and runtime proxies
+* Must compute queries at runtime
+* Cost of computation grows as your application grows
+
+![right, 20%](images/java.png)
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut Data
+
+* Precomputes Queries at compilation time
+* Uses Micronaut's reflection-free AOP
+* Zero runtime overhead database access solution
+* Compilation time checking
+* Smaller stack traces
+* JPA-QL and SQL currently supported
+
+
+![right, 35%](images/micronaut-stack-blue.png)
+
+----
+# Hello Micronaut Data
+
+![original](images/oci-backgrounds/oci-white.png)
+
+[.hide-footer]
+
+* Each repository interface annotated with `@JdbcRepository`
+* Can extend built in interfacesl like `CrudRepository`
+
+```java
+@JdbcRepository(dialect=Dialect.MYSQL)
+interface PersonRepository 
+	extends CrudRepository<Person,Long> {
+    Person findByName(String name);
+}
+
+```
+
+----
+# CRUD Example
+
+![original](images/oci-backgrounds/oci-white.png)
+
+```java
+// Create
+personRepository.save(new Person("Fred"));
+
+// Read
+Person person = personRepository.findByName("Fred");	
+
+// Update
+person.updatePerson(person.getId(), "Bob");
+
+// deleteById
+person.deleteById(person.getId());
+
+```
+
+----
+
+![original](images/oci-backgrounds/oci-demo-dark.png)
+
+# [FIT] **DEMO**
+## **Micronaut Data**
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut and GraalVM 
+
+* A New Universal Virtual Machine from Oracle
+* Features a `native-image` Tool 
+	* Converts Java -> native machine code using AOT
+* Works well with Micronaut
+* Startup time 20ms and Memory Consumption 18MB!
+
+> http://www.graalvm.org
+
+![right, 100%](images/graal.png)
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut and GraalVM 
+
+* GraalVM is cool and a project to keep an eye on
+* Still in beta and experimental
+* Micronaut optimizes for GraalVM, but 
+also optimizes for regular Java (what most people use today)
+
+> http://www.graalvm.org
+
+![right, 100%](images/graal.png)
+
+----
+
+![original](images/oci-backgrounds/oci-demo-dark.png)
+
+# [FIT] **DEMO**
+## **Micronaut + GraalVM**
+
+----
 
 
 # Micronaut Startup and Memory
@@ -892,10 +1129,18 @@ public interface HelloClient {
 
 Runtime|Memory|Startup
 ---|---|---|
-JDK 11 | 75MB | 1.1s
-JDK 13 | 75MB | 900ms
+JDK 11 | 75MB | 1s
+JDK 13 | 75MB | 750ms
 JDK 13 + CDS | 75MB | 400ms   
 GraalVM Substrate | 15MB | 21ms   
+
+----
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# [FIT] The Future Is 
+# [FIT] Intelligent Compilers 
+## Smaller, Leaner Runtimes
 
 ----
 
