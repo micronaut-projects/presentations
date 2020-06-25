@@ -328,7 +328,7 @@ and less at runtime
 
 ----
 
-![original](images/oci-backgrounds/oci-demo-dark.png)
+![original](images/oci-backgrounds/oci-demo-grey.png)
 
 # [FIT] **DEMO**
 ## **Micronaut**

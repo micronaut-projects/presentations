@@ -320,7 +320,7 @@ and less at runtime
 
 ----
 
-![original](images/oci-backgrounds/oci-demo-dark.png)
+![original](images/oci-backgrounds/oci-demo-grey.png)
 
 # [FIT] **DEMO**
 ## **Micronaut**
@@ -337,6 +337,19 @@ and less at runtime
 - Serverless Support for Azure and GCP
 - Incremental compilation for Gradle
 - New Maven Plugin
+
+![right, 35%](images/micronaut-stack-blue.png)
+
+---
+
+
+![original](images/oci-backgrounds/oci-white.png)
+
+# Micronaut 2.0
+
+- Servlet Support (deploy a WAR!)
+- HTTP/2 Support
+- Massive improvements to GraalVM support
 - Much more: [https://docs.micronaut.io/2.0.x/guide/index.html#whatsNew](https://docs.micronaut.io/2.0.x/guide/index.html#whatsNew)
 
 ![right, 35%](images/micronaut-stack-blue.png)
@@ -401,7 +414,7 @@ and less at runtime
 
 ----
 
-![original](images/oci-backgrounds/oci-demo-dark.png)
+![original](images/oci-backgrounds/oci-demo-grey.png)
 
 # [FIT] **Q & A**
 ## **Micronaut**
