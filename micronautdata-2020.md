@@ -167,13 +167,6 @@ person.deleteById(person.getId());
 
 ```
 
-----
-
-![original](images/oci-backgrounds/oci-demo-dark.png)
-
-# [FIT] **DEMO**
-## **Micronaut Data JPA**
-
 
 ----
 ##  Repository Methods
@@ -226,7 +219,7 @@ interface PersonRepository
 
 ----
 
-![original](images/oci-backgrounds/oci-demo-dark.png)
+![original](images/oci-backgrounds/oci-demo-grey.png)
 
 # [FIT] **DEMO**
 ## **Micronaut Data JDBC**
@@ -290,8 +283,6 @@ Product save(String name, Manufacturer manufacturer) {
 # Static vs Dynamic Queries
 
 
-![original](images/oci-backgrounds/oci-white.png)
-
 
 * Micronaut Data's strength is in static queries
 * For dynamic queries use JPA criteria for JPA
@@ -309,13 +300,10 @@ Product save(String name, Manufacturer manufacturer) {
 # GraalVM Native 
 
 
-![original](images/oci-backgrounds/oci-white.png)
-
-
 * Both JPA and JDBC implementations support GraalVM native image
-* Currently require a few tweaks when switching driver
-	* https://micronaut-projects.github.io/micronaut-data/latest/guide/#graal
-* Massive improvements coming to this support in Micronaut 2.0 / Micronaut Data 1.1
+* Support for most popular databases
+* Postgres, MySQL, Oracle, MS-SQL, H2 etc.
+* Massive improvements in Micronaut 2.0
 
 ![right, 25%](https://www.graalvm.org/resources/img/home/logo-coloured.svg)
 
@@ -326,17 +314,14 @@ Product save(String name, Manufacturer manufacturer) {
 # Micronaut Data Roadmap
 
 
-![original](images/oci-backgrounds/oci-white.png)
 
-
-* Micronaut Data 1.1 coming soon with UUID improvements, Oracle identity column support and better GraalVM support
+* Micronaut Data 1.1 current version
 * Micronaut Data 2.0 (Q4)
 	* R2DBC Support
-	* MongoDB Support
-	* Neo4j Support
+	* Document Database Support
+	* Graph Database Support
 
-
-![right, 50%](https://uc3456f2690d7fa57a150545bd99.previews.dropboxusercontent.com/p/thumb/AAzbc5KNbVmclMZ0zNc5Uz_yA89oAhEke6gvCj4M-WaCl94QZAM4xnMFNuvggYEwZ2C3u9crcye8ozNUOeUwBALRfnoGjPxg0O6ZFXfnAfQCfPo5PIqZ25YhOtEtr1wPGbOA7lF8X1QtNZP3cCJw0G_sQ7yENLkXWOnL6Sw6eMKzMkOKE8x6z7U7UeBrPd1bcJnJiRDdJEC__xfbozJLy1nciCAC8bHC9atI1w-SMVqPdB0MtbTaIwpdbz12Y8O0-_Hby92CFbJHLYuYS2rtpOFYlq-T_TtHpjRXue8-VlGM8XloEXz5vGpDovGeJJZV1BT_mL35m-FuvZrLbbQOQerxURsJDU4tXk-3eOZvo806HgaCVoGf3xkLzLqaI0p3ZSpsf75Z1zVAeWQ-meJ-P4DR/p.png?fv_content=true&size_mode=5)
+![right, 60%](https://uc3456f2690d7fa57a150545bd99.previews.dropboxusercontent.com/p/thumb/AAzbc5KNbVmclMZ0zNc5Uz_yA89oAhEke6gvCj4M-WaCl94QZAM4xnMFNuvggYEwZ2C3u9crcye8ozNUOeUwBALRfnoGjPxg0O6ZFXfnAfQCfPo5PIqZ25YhOtEtr1wPGbOA7lF8X1QtNZP3cCJw0G_sQ7yENLkXWOnL6Sw6eMKzMkOKE8x6z7U7UeBrPd1bcJnJiRDdJEC__xfbozJLy1nciCAC8bHC9atI1w-SMVqPdB0MtbTaIwpdbz12Y8O0-_Hby92CFbJHLYuYS2rtpOFYlq-T_TtHpjRXue8-VlGM8XloEXz5vGpDovGeJJZV1BT_mL35m-FuvZrLbbQOQerxURsJDU4tXk-3eOZvo806HgaCVoGf3xkLzLqaI0p3ZSpsf75Z1zVAeWQ-meJ-P4DR/p.png?fv_content=true&size_mode=5)
 
 ----
 
@@ -349,7 +334,7 @@ Product save(String name, Manufacturer manufacturer) {
 
 ----
 
-![original](images/oci-backgrounds/oci-demo-dark.png)
+![original](images/oci-backgrounds/oci-demo-grey.png)
 
 # [FIT] **Q & A**
 ## **Micronaut Data**
