@@ -22,6 +22,11 @@
 * Architect at Oracle Labs
 * Oracle Groundbreaker Award Winner
 * Java Champion
+* Leading Oracle's Contributions to Micronaut
+* [https://twitter.com/graemerocher](https://twitter.com/graemerocher)
+* [https://linkedin.com/graemerocher](https://twitter.com/graemerocher)
+
+![right, 70%](https://pbs.twimg.com/profile_images/1265580912529608704/MyQJ5NSv.jpg)
 
 ---
 
