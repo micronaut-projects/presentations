@@ -1,15 +1,5 @@
-
-```
-```
-```
-```
-```
-```
 # [FIT] **Introduction to**
 # [FIT] **Micronaut 2.0**
-
-```
-```
 
 ---
 
@@ -256,9 +246,9 @@ more efficient?
 
 # Micronaut and GraalVM
 
-* Micronaut + GraalVM Native Image are a much made in heaven
+* Micronaut + GraalVM Native Image are a match made in heaven
 * So much so I now work at Oracle Labs :)
-* Less to configure because Micronaut eliminates reflection, runtime proxies, byte code generation and dynamic classloading
+* Less work to configure Native Image because Micronaut eliminates reflection, runtime proxies, byte code generation and dynamic classloading
 
 
 > http://www.graalvm.org
@@ -351,7 +341,7 @@ more efficient?
 * Server Side Java is Adapting to the Serverless world
 * Building more efficient applications possible with right framework choices
 * AOT Sacrifices Compilation Speed to Gain so Much More
-* Going native an option for the future with GraalVM
+* Going native now a reality with GraalVM Native Image
 
 ---
 
