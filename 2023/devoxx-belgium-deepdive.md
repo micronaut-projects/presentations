@@ -1,5 +1,4 @@
-theme: OCI White
-slidenumbers: false
+slidenumbers: true
 [.hide-footer]
 
 <!-- ```
@@ -68,7 +67,6 @@ slidenumbers: false
 * Experimental HTTP/3 & io_uring support
 * New Client/Server Filters API
 * Micronaut Serialization
-* Bidirectional Micronaut OpenAPI Generation
 * Micronaut Control Panel
 * Context Propagation
 
@@ -76,10 +74,11 @@ slidenumbers: false
 
 # Agenda
 
-## Part 4 - Data & Cloud - 40 Minutes
+## Part 4 - Data & Cloud - 50 Minutes
 
 * Micronaut Data Introduction
 * Micronaut Data Updates (Hibernate 6, Hibernate Reactive)
+* Bidirectional Micronaut OpenAPI Generation
 * Testcontainers Improvements
 * Cloud Module Updates
 * Overview of GraalVM Cloud Native
@@ -194,6 +193,19 @@ Slow Dynamic Class Loading | No Dynamic Class Loaders
 
 ![right, 500%](https://www.graalvm.org/resources/img/graalvm.png)
 
+---
+
+# Introduction to GraalVM Cloud Native (GCN)
+
+* Curated set of Micronaut modules built at Oracle with support provided
+* Opinionated project generator for building Multi-cloud applications
+* Guided tutorials and labs on how to build GraalVM native Cloud-portable applications
+* Support for AWS & Oracle Cloud with Azure & GCP coming
+* [https://www.graal.cloud](https://www.graal.cloud)
+
+![right](https://oracle-labs-graalvm.gallerycdn.vsassets.io/extensions/oracle-labs-graalvm/graal-cloud-native-pack/0.0.3/1686640186448/Microsoft.VisualStudio.Services.Icons.Default)
+
+
 ----
 
 # [FIT] **DEMO**
@@ -306,7 +318,11 @@ JAR Size          | 14MB  | 11MB
 
 ![inline](images/performance.png)
 
+----
 
+* Source Matt Raible: [https://speakerdeck.com/mraible/comparing-native-java-rest-api-frameworks-chicago-jug-2023?slide=68](https://speakerdeck.com/mraible/comparing-native-java-rest-api-frameworks-chicago-jug-2023?slide=68)
+
+![inline](images/performance2.png)
 
 ----
 
@@ -344,7 +360,6 @@ JAR Size          | 14MB  | 11MB
 * Run tests with `./gradlew nativeTest` or `./mvnw test -Pnative`
 * If necessary collect GraalVM metadata with tracing agent
 * Contribute to the effort to create community-wide metadata!
-* TODO: Add link the metadata repo
 
 ![right, 500%](https://www.graalvm.org/resources/img/graalvm.png)
 
@@ -619,24 +634,6 @@ MyBean bean = builder
 ![right, 1000%](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1200px-Kotlin_Icon.png)
 
 
----
-
-## BREAK TIME (Back in 15 minutes)
-
-After the break come back to hear about:
-
-* Virtual Threads (Loom)
-* Experimental HTTP/3 & io_uring support
-* New Client/Server Filters API
-* Micronaut Serialization
-* Bidirectional Micronaut OpenAPI Generation
-* Micronaut Control Panel
-* Context Propagation
-
-
-![right, 35%](https://micronaut.io/wp-content/uploads/2020/11/MIcronautLogo_Horizontal.svg)
-
-
 ----
 
 
@@ -647,7 +644,6 @@ After the break come back to hear about:
 * Experimental HTTP/3 & io_uring support
 * New Client/Server Filters API
 * Micronaut Serialization
-* Bidirectional Micronaut OpenAPI Generation
 * Micronaut Control Panel
 * Context Propagation
 
@@ -745,73 +741,7 @@ public record Person(
 * Use annotation API you prefer (Jackson Annotations or JSON-B)
 * Use runtime you prefer (Jackson Parser or JSON-P)
 
-----
-
-
-# [FIT] **DEMO**
-## **Micronaut OpenAPI**
-
-----
-
-# Micronaut OpenAPI
-
-* Generate OpenAPI 3.x spec from Java sources
-* Generate Java sources from OpenAPI 3.x spec
-* [https://github.com/micronaut-projects/micronaut-openapi/](https://github.com/micronaut-projects/micronaut-openapi/)
-
-![inline](https://blogs.sap.com/wp-content/uploads/2021/02/logo3.png)
-
-----
-
-# Micronaut OpenAPI Client Generation
-
-```java
-// build.gradle
-micronaut {
-  openapi {
-    client(file("src/openapi/openmeteo.yml")) {
-      apiPackageName = "example.openmeteo.api"
-      modelPackageName = "example.openmeteo.model"
-    }
-  }
-}
-```
-```xml
-<properties> <!-- pom.xml -->
-  <micronaut.openapi.generate.client>true</micronaut.openapi.generate.client>
-  <micronaut.openapi.definition>src/openapi/openmeteo.yml</micronaut.openapi.definition>
-  <micronaut.openapi.api.package.name>example.openmeteo.api</micronaut.openapi.api.package.name>
-  <micronaut.openapi.model.package.name>example.openmeteo.model</micronaut.openapi.model.package.name>
-</properties>
-```
-
-----
-
-# Micronaut OpenAPI Server Generation
-
-```java
-// build.gradle
-micronaut {
-  ...
-  openapi {
-    server(file("src/main/resources/library-definition.yml")) { 
-      apiPackageName = "example.micronaut.api"
-      modelPackageName = "example.micronaut.model"
-    }
-  }
-}
-```
-```xml
-<properties>
-    <micronaut.openapi.generate.server>true</micronaut.openapi.generate.client> 
-    <micronaut.openapi.definition>src/main/resources/library-definition.yml</micronaut.openapi.definition> 
-    <micronaut.openapi.api.package.name>micronaut.example.api</micronaut.openapi.api.package.name> 
-    <micronaut.openapi.model.package.name>micronaut.example.model</micronaut.openapi.model.package.name> 
-</properties>
-```
-
-----
-
+---
 
 # [FIT] **DEMO**
 ## **Micronaut Control Panel**
@@ -824,6 +754,20 @@ micronaut {
 * [https://github.com/micronaut-projects/micronaut-control-panel](https://github.com/micronaut-projects/micronaut-control-panel)
 
 ![inline](https://micronaut-projects.github.io/micronaut-control-panel/latest/img/control-panel.png)
+
+---
+
+## BREAK TIME (Back in 15 minutes)
+
+After the break come back to hear about:
+
+* Context Propagation
+* Micronaut Data Updates
+* OpenAPI Generation
+* GraalVM Cloud Native
+
+
+![right, 35%](https://micronaut.io/wp-content/uploads/2020/11/MIcronautLogo_Horizontal.svg)
 
 ----
 
@@ -861,7 +805,7 @@ public class MdcFilter {
 
 ----
 
-## Part 4 - Data & Cloud - 40 Minutes
+## Part 4 - Data & Cloud - 50 Minutes
 
 * Micronaut Data Introduction
 * Micronaut Data Updates (Hibernate 6, Hibernate Reactive)
@@ -946,6 +890,7 @@ public class MdcFilter {
 # Micronaut Data in Micronaut 4
 
 * Rewritten transaction management with support for reactive tx management
+* Decoupled from Validation
 * Support for Hibernate Reactive
 * Support for Oracle Database JSON Duality Views
 * [https://blogs.oracle.com/java/post/json-relational-duality-views-with-micronaut-framework](https://blogs.oracle.com/java/post/json-relational-duality-views-with-micronaut-framework)
@@ -953,6 +898,72 @@ public class MdcFilter {
 ![right, 50%](https://objectcomputing.com/files/2116/2256/3670/sally_micronaut_mascot.png)
 
 ----
+
+
+# [FIT] **DEMO**
+## **Micronaut OpenAPI**
+
+----
+
+# Micronaut OpenAPI
+
+* Generate OpenAPI 3.x spec from Java sources
+* Generate Java sources from OpenAPI 3.x spec
+* [https://github.com/micronaut-projects/micronaut-openapi/](https://github.com/micronaut-projects/micronaut-openapi/)
+
+![inline](https://blogs.sap.com/wp-content/uploads/2021/02/logo3.png)
+
+----
+
+# Micronaut OpenAPI Client Generation
+
+```java
+// build.gradle
+micronaut {
+  openapi {
+    client(file("src/openapi/openmeteo.yml")) {
+      apiPackageName = "example.openmeteo.api"
+      modelPackageName = "example.openmeteo.model"
+    }
+  }
+}
+```
+```xml
+<properties> <!-- pom.xml -->
+  <micronaut.openapi.generate.client>true</micronaut.openapi.generate.client>
+  <micronaut.openapi.definition>src/openapi/openmeteo.yml</micronaut.openapi.definition>
+  <micronaut.openapi.api.package.name>example.openmeteo.api</micronaut.openapi.api.package.name>
+  <micronaut.openapi.model.package.name>example.openmeteo.model</micronaut.openapi.model.package.name>
+</properties>
+```
+
+----
+
+# Micronaut OpenAPI Server Generation
+
+```java
+// build.gradle
+micronaut {
+  ...
+  openapi {
+    server(file("src/main/resources/library-definition.yml")) { 
+      apiPackageName = "example.micronaut.api"
+      modelPackageName = "example.micronaut.model"
+    }
+  }
+}
+```
+```xml
+<properties>
+    <micronaut.openapi.generate.server>true</micronaut.openapi.generate.client> 
+    <micronaut.openapi.definition>src/main/resources/library-definition.yml</micronaut.openapi.definition> 
+    <micronaut.openapi.api.package.name>micronaut.example.api</micronaut.openapi.api.package.name> 
+    <micronaut.openapi.model.package.name>micronaut.example.model</micronaut.openapi.model.package.name> 
+</properties>
+```
+
+----
+
 # More Guides on Micronaut Data
 
 * Access a Database with Micronaut Data JDBC - https://guides.micronaut.io/latest/micronaut-data-jdbc-repository.html
