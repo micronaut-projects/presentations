@@ -1,0 +1,11 @@
+plugins {
+    id 'io.micronaut.build.internal.project-template-module'
+    id("org.jetbrains.kotlin.jvm") version "1.8.22"
+    id("com.google.devtools.ksp") version "1.8.22-1.0.11"
+}
+
+dependencies {
+    ksp("io.micronaut:micronaut-inject-kotlin:4.1.7")
+    ksp(project(":avro-compiler-plugin"))
+    implementation(project(":avro-annotation"))
+}

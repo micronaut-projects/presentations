@@ -1,0 +1,13 @@
+plugins {
+    id 'io.micronaut.build.internal.project-template-module'
+    id 'groovy'
+}
+
+dependencies {
+    compileOnly("io.micronaut:micronaut-inject-groovy:4.1.7")
+    compileOnly(project(":avro-compiler-plugin"))
+    implementation(project(":avro-annotation"))
+    implementation("org.apache.groovy:groovy:${libs.versions.groovy}")
+}
+
+

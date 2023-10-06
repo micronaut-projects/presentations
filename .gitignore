@@ -1,6 +1,5 @@
 .DS_Store
 .gradle
-demos/
 .idea
 /springboot-micronaut/build
 *.iml

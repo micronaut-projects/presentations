@@ -1,0 +1,30 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'io.micronaut.build.shared.settings' version '6.5.6'
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'compiler-plugins-demo'
+
+include 'avro-compiler-plugin'
+include 'avro-annotation'
+include 'java-project'
+include 'groovy-project'
+include 'kotlin-project'
+
+enableFeaturePreview 'TYPESAFE_PROJECT_ACCESSORS'
+
+micronautBuild {
+    importMicronautCatalog()
+}

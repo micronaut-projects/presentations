@@ -1,0 +1,8 @@
+plugins {
+    id 'io.micronaut.build.internal.project-template-module'
+}
+
+dependencies {
+    annotationProcessor(project(":avro-compiler-plugin"))
+    implementation(project(":avro-annotation"))
+}

@@ -1,0 +1,7 @@
+// If you don't need any common settings/dependencies/... for everything, remove this convention plugin and the reference to it in `io.micronaut.build.internal.project-template-module.gradle` file
+configurations.all {
+    resolutionStrategy.dependencySubstitution {
+        substitute(module("org.codehaus.groovy:groovy"))
+                .using(module("org.apache.groovy:groovy:${libs.versions.groovy}"))
+    }
+}

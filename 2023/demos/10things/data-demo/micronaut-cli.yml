@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: data.demo
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle_kotlin
+features: [app-name, data, data-jdbc, gradle, h2, http-client-test, java, java-application, jdbc-hikari, junit, logback, micronaut-aot, micronaut-build, micronaut-http-validation, netty-server, properties, readme, serialization-jackson, shade, validation]

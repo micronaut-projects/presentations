@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: kafka.producer.demo
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle_kotlin
+features: [app-name, gradle, http-client-test, java, java-application, junit, kafka, logback, micronaut-aot, micronaut-build, micronaut-http-validation, netty-server, properties, readme, serialization-jackson, shade, test-resources]

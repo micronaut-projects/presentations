@@ -1,0 +1,8 @@
+plugins {
+    id 'io.micronaut.build.internal.project-template-module'
+}
+dependencies {
+    api("io.micronaut:micronaut-core-processor:4.1.7")
+    api("com.fasterxml.jackson.core:jackson-databind:2.15.2")
+    api(project(":avro-annotation"))
+}

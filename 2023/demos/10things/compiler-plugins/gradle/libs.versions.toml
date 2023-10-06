@@ -1,0 +1,50 @@
+#
+# This file is used to declare the list of libraries
+# which are used as dependencies in the project.
+# See https://docs.gradle.org/7.4.2/userguide/platforms.html#sub:central-declaration-of-dependencies
+#
+# For Micronaut, we have 3 kinds of dependencies:
+#   - managed dependencies, which are exposed to consumers via a BOM (or version catalog)
+#   - managed BOMs, which are imported into the BOM that we generate
+#   - all other dependencies, which are implementation details
+#
+# If a library needs to appear in the BOM of the project, then it must be
+# declared with the "managed-" prefix.
+# If a BOM needs to be imported in the BOM of the project, then it must be
+# declared with the "boms-" prefix.
+# Both managed dependencies and BOMs need to have their version declared via
+# a managed version (a version which alias starts with "managed-"
+
+[versions]
+micronaut = "4.1.8"
+micronaut-docs = "2.0.0"
+micronaut-test = "3.9.1"
+groovy = "3.0.13"
+spock = "2.3-groovy-3.0"
+
+# Managed versions appear in the BOM
+# managed-somelib = "1.0"
+# managed-somebom = "1.1"
+
+[libraries]
+# Core
+micronaut-core = { module = 'io.micronaut:micronaut-core-bom', version.ref = 'micronaut' }
+
+#
+# Managed dependencies appear in the BOM
+#
+# managed-somelib = { module = "group:artifact", version.ref = "managed-somelib" }
+
+#
+# Imported BOMs, also appearing in the generated BOM
+#
+# boms-somebom = { module = "com.foo:somebom", version.ref = "managed-somebom" }
+
+# Other libraries used by the project but non managed
+
+# micronaut-bom = { module = "io.micronaut:micronaut-bom", version.ref = "micronaut" }
+# jdoctor = { module = "me.champeau.jdoctor:jdoctor-core", version.ref="jdoctor" }
+
+[bundles]
+
+[plugins]

@@ -1,0 +1,41 @@
+{
+  "resources":{
+  "includes":[{
+    "pattern":"\\Qen/elder_scrolls.yml\\E"
+  }, {
+    "pattern":"\\Qen/half_life.yml\\E"
+  }, {
+    "pattern":"\\Qen/hearthstone.yml\\E"
+  }, {
+    "pattern":"\\Qen/league_of_legends.yml\\E"
+  }, {
+    "pattern":"\\Qen/marvel_snap.yml\\E"
+  }, {
+    "pattern":"\\Qen/myst.yml\\E"
+  }, {
+    "pattern":"\\Qen/name.yml\\E"
+  }, {
+    "pattern":"\\Qen/overwatch.yml\\E"
+  }, {
+    "pattern":"\\Qen/pokemon.yml\\E"
+  }, {
+    "pattern":"\\Qen/resident_evil.yml\\E"
+  }, {
+    "pattern":"\\Qen/sonic_the_hedgehog.yml\\E"
+  }, {
+    "pattern":"\\Qen/street_fighter.yml\\E"
+  }, {
+    "pattern":"\\Qen/super_mario.yml\\E"
+  }, {
+    "pattern":"\\Qen/super_smash_bros.yml\\E"
+  }, {
+    "pattern":"\\Qen/warhammer_fantasy.yml\\E"
+  }, {
+    "pattern":"\\Qen/witcher.yml\\E"
+  }, {
+    "pattern":"\\Qen/world_of_warcraft.yml\\E"
+  }, {
+    "pattern":"\\Qen/zelda.yml\\E"
+  }]},
+  "bundles":[]
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "name":"net.datafaker.Faker",
+    "queryAllPublicMethods":true
+  },
+  {
+    "name":"net.datafaker.providers.base.Name",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"firstName","parameterTypes":[] }, {"name":"lastName","parameterTypes":[] }, {"name":"prefix","parameterTypes":[] }, {"name":"suffix","parameterTypes":[] }]
+  },
+  {
+    "name":"net.datafaker.providers.entertainment.Pokemon",
+    "queryAllPublicMethods":true
+  }
+]
